@@ -1,0 +1,34 @@
+﻿<Window x:Class="JewelryApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JewelryApp"
+        mc:Ignorable="d"
+        Title="Login" Height="230" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="0.5"/>
+            <RowDefinition  Height="30"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition  Height="30"/>
+            <RowDefinition  Height="15"/>
+            <RowDefinition  Height="30"/>
+            <RowDefinition  Height="0.5"/>
+        </Grid.RowDefinitions>
+       <Label Name="lbl_UserName" Grid.Row="1" Grid.Column="1" Content="UserName" Width="70" Height="25"/>
+        <TextBox Name="txt_UserName" Grid.Row="1" Grid.Column="3" Width="180" Height="25" />
+        <Label Name="lbl_Password" Grid.Row="3" Grid.Column="1" Content="Password" Width="70" Height="25"/>
+        <PasswordBox Name="txt_Password" Grid.Row="3" Grid.Column="3" Width="180" Height="25"/>
+        <Button Name="btn_Login" Content="Login" Grid.Row="5" Grid.Column="1" Width="70" Height="25" Click="btn_Login_Click"/>
+        <Button Name="btn_Cancel" Content="Cancel" Grid.Row="5" Grid.Column="3" Width="70" Height="25" Click="btn_Cancel_Click"/>
+    </Grid>
+</Window>
+ 

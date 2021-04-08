@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Users>
+	<crendential>
+		<username>Normal</username>
+		<password>12345</password>
+	</crendential>
+	<crendential>
+		<username>Privileged</username>
+		<password>123456</password>
+	</crendential>
+</Users>

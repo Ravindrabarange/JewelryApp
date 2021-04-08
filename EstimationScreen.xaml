@@ -1,0 +1,61 @@
+﻿<Window x:Class="JewelryApp.EstimationScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JewelryApp"
+        mc:Ignorable="d"
+        Title="EstimationScreen" Height="350" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="0.5"/>
+            <RowDefinition  Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition  Height="35"/>
+            <RowDefinition  Height="35"/>
+            <RowDefinition  Height="35"/>
+            <RowDefinition  Height="35"/>
+            <RowDefinition  Height="35"/>
+            <RowDefinition  Height="35"/>
+            <RowDefinition  Height="0.5"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="3"  HorizontalAlignment="Right"> 
+            <Label Name="lbl_Welcome"  Content="Welcome: " Height="25"/>
+            <Label Name="lbl_UserName" Content="CustomerCat" Height="25"/>
+            <Label  Content="User" Height="25"/>
+        </StackPanel>
+        <Label Name="lbl_GoldPrice"  Content="Gold Price (Per Gram)" Grid.Row="2" Grid.Column="1" 
+               Width="130" Height="25"/>
+        <TextBox Name="txt_GoldPrice" Grid.Row="2" Grid.Column="3" Width="180" Height="25" MaxLength="8"/>
+        
+        <Label Name="lbl_Weight"  Content="Weight (Grams)" Grid.Row="3" Grid.Column="1" 
+               Width="130" Height="25"/>
+        <TextBox Name="txt_Weight" Grid.Row="3" Grid.Column="3" Width="180" Height="25" MaxLength="8" />
+        
+        <StackPanel Grid.Row="4" Grid.Column="3" Orientation="Horizontal"  Width="180">
+            <Label Name="lbl_Discount"  Content="Discount % : " Width="80" Height="25"/>
+            <TextBox Name="txt_Discount" Width="100" Height="25"  MaxLength="3" ToolTip="Discount must be between 0 to 100 and an integer." />
+        </StackPanel>
+
+        <Label Name="lbl_Price"  Content="Total Price" Grid.Row="5" Grid.Column="1" 
+               Width="130" Height="25"/>
+        <Label Name="txt_Price" Grid.Row="5" Grid.Column="3" Width="180" Height="25"/>
+
+       
+        
+        <StackPanel Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Name="btn_Calculate" Content="Calculate" Margin="2" Width="90" Height="25" Click="btn_Calculate_Click"/>
+            <Button Name="btn_printToScreen" Content="Print To Screen" Margin="2" Width="90" Height="25" Click="btn_printToScreen_Click"/>
+            <Button Name="btn_PrintToFile" Content="Print To File" Margin="2" Width="90" Height="25" Click="btn_PrintToFile_Click"/>
+            <Button Name="btn_PrintToPaper" Content="Print To Paper" Margin="2" Width="90" Height="25" Click="btn_PrintToPaper_Click"/>          
+        </StackPanel>
+        <Button Name="btn_Close" Grid.Row="8" Grid.Column="3" Content="Close" Width="70" Height="25" HorizontalAlignment="Right" Click="btn_Close_Click"/>
+    </Grid>
+</Window>
